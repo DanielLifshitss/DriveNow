@@ -1,4 +1,3 @@
-#Containse all rentals API endpoints for version 1
 from fastapi import APIRouter
 
 rental_router = APIRouter(

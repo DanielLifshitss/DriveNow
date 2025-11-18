@@ -1,4 +1,3 @@
-#Containse all car API endpoints for version 1
 from fastapi import APIRouter
 
 car_router = APIRouter(

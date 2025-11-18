@@ -1,4 +1,3 @@
-#Main Application Entry Point
 from fastapi import FastAPI
 from api.routers.v1.cars import car_router
 from api.routers.v1.rentals import rental_router
