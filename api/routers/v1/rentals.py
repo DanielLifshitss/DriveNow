@@ -1,0 +1,1 @@
+#Containse all rentals API endpoints for version 1
