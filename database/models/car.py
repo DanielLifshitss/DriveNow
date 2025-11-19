@@ -1,10 +1,10 @@
 from datetime import datetime
-from enum import Enum
+import enum
 from sqlalchemy import Column, Integer, String, Enum, DateTime
 from sqlalchemy.orm import relationship
-from base import Base
+from database.base import Base
 
-class CarStatus(Enum):
+class CarStatus(enum.Enum):
     AVAILABLE = "available"
     RENTED = "rented"
     MAINTENANCE = "maintenance"
