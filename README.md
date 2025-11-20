@@ -78,6 +78,9 @@ POST /metrics
 <img width="1287" height="191" alt="drivenow pytest resault" src="https://github.com/user-attachments/assets/69e72a77-d33c-4f19-9038-f9e5516bf9f3" />
 <img width="433" height="128" alt="drivenow pytest cache" src="https://github.com/user-attachments/assets/e25ee4c0-488f-4bf4-8f17-6e135b8cd2e8" />
 
+## Logs from logger:
+<img width="688" height="164" alt="loggssssssssssssssssss" src="https://github.com/user-attachments/assets/e279a34b-7a6a-4288-b239-af0d45f8f414" />
+
 ## Endpoint Excecutions:
 
 ### Endpoint:
@@ -132,6 +135,7 @@ POST /v1/rentals/ -create new rental
 
 ### Database Screenshot:
 <img width="676" height="220" alt="drivenow endrental db" src="https://github.com/user-attachments/assets/733cac0c-92fc-4f39-84ad-a6a36976d6d9" />
+
 
 
 
