@@ -1,4 +1,5 @@
 # Drive Now project
+DriveNow - Technical Assignment – Vehicle Management System for a Car Rental Company
 
 ## project Stracture - monorepo structure:
 
@@ -135,6 +136,7 @@ POST /v1/rentals/ -create new rental
 
 ### Database Screenshot:
 <img width="676" height="220" alt="drivenow endrental db" src="https://github.com/user-attachments/assets/733cac0c-92fc-4f39-84ad-a6a36976d6d9" />
+
 
 
 
