@@ -107,6 +107,32 @@ PATCH /v1/cares/{car_id} -update car
 ### Database Screenshot:
 <img width="462" height="222" alt="drivenow update car db change" src="https://github.com/user-attachments/assets/0f82ad02-5db0-4cd8-a11c-9287a323692f" />
 
+```bash
+POST /v1/rentals/ -create new rental
+```
+### Swagger Screenshot:
+<img width="1152" height="511" alt="drivenow rentcar enpoint swagger" src="https://github.com/user-attachments/assets/d46017a6-54e2-4d8a-8ea5-36cf20a6987b" />
+<img width="721" height="675" alt="drivenow rentcar swagger resault" src="https://github.com/user-attachments/assets/4a5ed1a0-ab32-4661-8827-f51466059b88" />
+
+### Console log Screenshot:
+<img width="448" height="18" alt="drivenow rentcar endpoint log" src="https://github.com/user-attachments/assets/cac9dc3e-0903-4ce9-9553-6839cbb3463c" />
+
+### Database Screenshot:
+<img width="615" height="221" alt="drivenow rentcar db" src="https://github.com/user-attachments/assets/308480a3-af27-4b6f-b1b2-b522806834bc" />
+
+```bash
+POST /v1/rentals/ -create new rental
+```
+### Swagger Screenshot:
+<img width="957" height="497" alt="drivenow end rental endpoint swagger" src="https://github.com/user-attachments/assets/2044634f-a88f-4053-8c9d-69e17edf45c4" />
+<img width="725" height="667" alt="drivenow end rental endpoint response" src="https://github.com/user-attachments/assets/5980a831-d462-4d09-8a8c-1d7d3805e2ac" />
+
+### Console log Screenshot:
+<img width="485" height="18" alt="drivenow end rental log" src="https://github.com/user-attachments/assets/c009e4f2-0a43-4a05-ae92-3c619933e159" />
+
+### Database Screenshot:
+<img width="676" height="220" alt="drivenow endrental db" src="https://github.com/user-attachments/assets/733cac0c-92fc-4f39-84ad-a6a36976d6d9" />
+
 
 
 
