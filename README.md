@@ -70,13 +70,13 @@ drivenow/
 └── README.md 
 ```
 
-##Projcet Installation:
-###Local Installations:
+## Projcet Installation:
+### Local Installations:
 ```bash
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
-###Local Installations:
+### Local Installations:
 ```bash
 docker build -t drivenow .
 docker-compose up --build
@@ -170,6 +170,7 @@ POST /v1/rentals/ -create new rental
 
 ### Database Screenshot:
 <img width="676" height="220" alt="drivenow endrental db" src="https://github.com/user-attachments/assets/733cac0c-92fc-4f39-84ad-a6a36976d6d9" />
+
 
 
 
