@@ -1,8 +1,30 @@
-# Drive Now project
+# DriveNow Service
 DriveNow - Technical Assignment – Vehicle Management System for a Car Rental Company
+The system is built using a Layered / Clean Architecture approach:
 
-## project Stracture - monorepo structure:
-
+### Presentation Layer (API)
+```bash
+FastAPI routers (api/routers)
+Request/response models (schemas)
+```
+### Service Layer (Business Logic)
+```bash
+Car creation, updates, filtering
+Rental lifecycle management
+Validation unrelated to HTTP
+Data Layer (Persistence)
+SQLAlchemy models (database/models)
+DB session management
+Query + write operations
+```
+### Infrastructure Layer
+```bash
+Logging
+Middleware
+Docker
+Environment configuration
+```
+## Project Stracture - Hexagonal / Ports-and-Adapters (light version):
 ```bash
 drivenow/
 │
@@ -136,6 +158,7 @@ POST /v1/rentals/ -create new rental
 
 ### Database Screenshot:
 <img width="676" height="220" alt="drivenow endrental db" src="https://github.com/user-attachments/assets/733cac0c-92fc-4f39-84ad-a6a36976d6d9" />
+
 
 
 
