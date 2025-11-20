@@ -3,7 +3,7 @@ from fastapi import Depends, HTTPException
 from sqlalchemy.orm import Session
 from database.session import get_db
 from api.schemas.cars import CarCreate, CarUpdate, CarsList, CarStatus, CarOut
-from database.services.car_service import list_cars, add_car, update_car 
+from database.services.car_service import (list_cars, add_car, update_car as car_update_service_func)
 
 car_router = APIRouter(
     prefix="/v1/cars",
@@ -22,6 +22,6 @@ async def create_car(car: CarCreate, db: Session = Depends(get_db)) -> CarOut:
 @car_router.patch("/{car_id}", response_model=CarOut)
 async def update_car(car_id: int, payload: CarUpdate, db: Session = Depends(get_db)) -> CarOut:
     try:
-        return update_car(db, car_id, payload.model, payload.year, payload.status)
+        return car_update_service_func(db, car_id, payload.model, payload.year, payload.status)
     except ValueError as e:
         raise HTTPException(404, str(e))

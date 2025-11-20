@@ -3,7 +3,7 @@ from fastapi import Depends, HTTPException
 from sqlalchemy.orm import Session
 from database.session import get_db
 from api.schemas.rentals import RentalCreate, RentalEndRequest, RentalOut
-from database.services.rentals_service  import register_rental, end_rental
+from database.services.rentals_service  import register_rental, end_rental as end_rental_service_func
 
 rental_router = APIRouter(
     prefix="/v1/rentals",
@@ -20,6 +20,6 @@ async def create_rental(r: RentalCreate, db: Session = Depends(get_db)) -> Renta
 @rental_router.post("/{rental_id}/end", response_model=RentalOut)
 async def end_rental(rental_id: int, payload: RentalEndRequest, db: Session = Depends(get_db)) -> RentalOut:
     try:
-        return end_rental(db, rental_id, payload.new_status)
+        return end_rental_service_func(db, rental_id, payload.new_status)
     except ValueError as e:
         raise HTTPException(400, str(e))

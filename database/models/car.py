@@ -4,12 +4,11 @@ from sqlalchemy import Column, Integer, String, Enum, DateTime
 from sqlalchemy.orm import relationship
 from database.base import Base
 
-class CarStatus(enum.Enum):
+class CarStatus(str, enum.Enum):
     AVAILABLE = "available"
     RENTED = "rented"
     MAINTENANCE = "maintenance"
     
-
 class Car(Base):
     
     __tablename__ = "cars"

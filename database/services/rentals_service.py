@@ -1,8 +1,7 @@
 
-from datetime import datetime
+from datetime import datetime,timezone
 from sqlalchemy.orm import Session
-from database.models.car import Car, CarStatus
-from database.models.rentals import Rental
+from database.models import Car, CarStatus, Rental
 from app.middleware.metrics import recalc_metrics
 
 def register_rental(db: Session, car_id: int, customer_name: str):
@@ -12,7 +11,7 @@ def register_rental(db: Session, car_id: int, customer_name: str):
         raise ValueError("Car not available")
 
     rental = Rental(car_id=car_id, customer_name=customer_name)
-    car.status = CarStatus.IN_USE
+    car.status = CarStatus.RENTED
 
     db.add(rental)
     db.commit()
@@ -25,7 +24,7 @@ def end_rental(db: Session, rental_id: int, new_status: CarStatus):
     if not rental: raise ValueError("Rental not found")
     if rental.end_date: raise ValueError("Already ended")
 
-    rental.end_date = datetime.utcnow()
+    rental.end_date = datetime.now(timezone.utc)
     car = db.query(Car).filter(Car.id == rental.car_id).first()
     car.status = new_status
 

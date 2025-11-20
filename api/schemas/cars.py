@@ -1,5 +1,5 @@
 from typing import Optional
-from pydantic import BaseModel
+from pydantic import BaseModel,ConfigDict
 from typing import List
 from database.models.car import CarStatus
 
@@ -18,8 +18,7 @@ class CarUpdate(BaseModel):
 class CarOut(CarBase):
     id: int
     status: CarStatus
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 class CarsList(BaseModel):
     cars: List[CarOut]
