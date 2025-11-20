@@ -1,0 +1,6 @@
+2025-11-20 13:03:53,489 [INFO] vehicle_app Health check endpoint called
+2025-11-20 13:05:26,125 [INFO] vehicle_app Listing cars with status filter: None
+2025-11-20 13:06:59,327 [INFO] vehicle_app Listing cars with status filter
+2025-11-20 13:07:18,550 [INFO] vehicle_app Listing cars with status filter
+2025-11-20 13:10:20,939 [INFO] vehicle_app Creating car: string, Year: 0
+2025-11-20 13:10:36,126 [INFO] vehicle_app Listing cars with status filter

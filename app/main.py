@@ -15,8 +15,10 @@ logger = setup_logging()
 
 @app.get("/")
 async def health_check():
+    logger.info("Health check endpoint called")
     return {"status":"OK"}
 
 @app.get("/metrics")
 async def metrics():
+    logger.info("Metrics endpoint called")
     return await metrics_endpoint()
