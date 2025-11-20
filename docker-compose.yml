@@ -1,20 +1,10 @@
 services:
   api:
-    build: .
-    container_name: drivenow_api
-    restart: unless-stopped
-
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: drivenow-api
     ports:
       - "8000:8000"
-
     environment:
-      DATABASE_URL: "sqlite:///./vehicles.db"
-
-    volumes:
-      - ./logs:/app/logs
-      - ./vehicles.db:/app/vehicles.db
-
-    command: >
-      uvicorn app.main:app
-      --host 0.0.0.0
-      --port 8000
+      - DATABASE_URL=sqlite:///./vehicles.db
